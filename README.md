@@ -1,11 +1,11 @@
 # How to run?
 ```
-docker compose up
+docker-compose up
 ```
 
 # Endpoints
 
-## /cost
+## /cost POST
 ```
 {
   startDate,
@@ -14,7 +14,7 @@ docker compose up
 }
 ```
 
-## /booking
+## /booking POST
 ```
 {
   startDate,
@@ -24,9 +24,16 @@ docker compose up
 }
 ```
 
-## /report
+## /report/getById GET
 ```
 {
-  
+  carId
+}
+```
+
+## /report/getAllCars GET
+```
+{
+
 }
 ```

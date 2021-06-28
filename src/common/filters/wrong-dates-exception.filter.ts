@@ -1,8 +1,6 @@
 import { Catch } from '@nestjs/common';
-import { BaseExceptionFilter } from '@nestjs/core';
-import { WrongDatesException } from '../exceptions/wrongdates.exception';
+import { WrongDatesException } from '../exceptions';
+import { BaseExceptionFilter } from "./base-exception.filter";
 
 @Catch(WrongDatesException)
-export class WrongDatesExceptionFilter<
-  WrongDatesException,
-> extends BaseExceptionFilter {}
+export class WrongDatesExceptionFilter extends BaseExceptionFilter<WrongDatesException> {}

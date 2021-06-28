@@ -1,8 +1,6 @@
 import { Catch } from '@nestjs/common';
-import { BaseExceptionFilter } from '@nestjs/core';
-import { DatabaseException } from '../exceptions/database.exception';
+import { DatabaseException } from '../exceptions';
+import { BaseExceptionFilter } from "./base-exception.filter";
 
 @Catch(DatabaseException)
-export class DatabaseExceptionFilter<
-  DatabaseException,
-> extends BaseExceptionFilter {}
+export class DatabaseExceptionFilter extends BaseExceptionFilter<DatabaseException> {}
